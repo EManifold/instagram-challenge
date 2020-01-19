@@ -13,7 +13,9 @@
     <% end %>
   </div>
   <% else %>
-
+  <div>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  </div>
   <div>
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
   </div>
