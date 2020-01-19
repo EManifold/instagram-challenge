@@ -21,3 +21,7 @@ def sign_in
   fill_in "Password", with: 'password'
   click_on "Log in"
 end
+
+def add_post
+
+end

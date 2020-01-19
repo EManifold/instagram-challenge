@@ -3,3 +3,13 @@
 </div>
 
 <h1>Your feed</h1>
+
+<% @posts.reverse.each do |post| %>
+  <div id='<%=post.id%>'>
+  <div><%= post.caption %></div>
+  <div style="width:400px; height:auto"><%= image_tag(post.image, style:'width:100%') %></div>
+  <div><%= (post.created_at).to_s.slice(11...16) %></div>
+  <%= link_to 'Delete', post_path(post), method: :delete %>
+  <%= link_to 'Edit', edit_post_path(post) %>
+  </div>
+<% end %>
