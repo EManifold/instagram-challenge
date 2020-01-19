@@ -6,6 +6,7 @@
 
 <% @posts.reverse.each do |post| %>
   <div id='<%=post.id%>'>
+  <div><%= (User.find(post.user_id)).username %></div>
   <div><%= post.caption %></div>
   <div style="width:400px; height:auto"><%= image_tag(post.image, style:'width:100%') %></div>
   <div><%= (post.created_at).to_s.slice(11...16) %></div>
